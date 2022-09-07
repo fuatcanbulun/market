@@ -1,0 +1,22 @@
+.market-page-body {
+    height: calc(100vh - 76px);
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+    background-color: var(--areaColor1);
+}
+
+.market-page-body-grid {   
+    width: 800px;
+    display: flex;
+}
+@media screen and (min-width: 960px) {
+    .market-page-body-grid {
+        width: 800px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .market-page-body-grid {
+        width: 1232px;   
+    }
+}

@@ -1,0 +1,64 @@
+.market-checkbox-group {  
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.market-checkbox-group-search { 
+    height:44px; 
+    border: 2px solid #E0E0E0;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 44px;
+    padding-left: 16px;
+    color: var(--tertiaryText)
+}
+
+.market-checkbox-group-body {  
+    display: flex;
+    flex-direction: column;
+    height: 124px;
+    overflow-y: scroll;
+    margin-top: 16px;
+    padding: 3px;
+}
+
+.market-checkbox-group-body::-webkit-scrollbar-track {     
+    border-radius: 2px;
+}
+ 
+.market-checkbox-group-body::-webkit-scrollbar {
+    width: 4px;
+    background-color: #F5F5F5;
+}
+ 
+.market-checkbox-group-body::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    width: 4px;
+    background-color: var(--areaColor3)
+}
+
+.market-checkbox-group-item {
+    height:22px;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.market-checkbox-group-item:last-child {
+    margin-bottom: 0;
+}
+
+.market-checkbox-group-item-icon {
+    width:22px;
+    height:22px;
+    border-radius: 2px;
+    background: var(--areaColor2);
+    box-shadow: 0px 1px 7px rgba(93, 56, 192, 0.4);
+}
+
+.market-checkbox-group-item-label {
+    height:22px;
+    line-height: 22px;
+    font-size:14px;
+    padding-left:12px;
+}

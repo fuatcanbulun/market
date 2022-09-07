@@ -1,3 +1,12 @@
+:root {
+  --themeColor: #1EA4CE;
+  --areaColor1: #FAFAFA;
+  --areaColor2: #ffffff;
+  --areaColor3: #E0E0E0;
+  --areaColor4: #F4F4F4;
+  --tertiaryText: #A8A8A8;
+}
+
 .App {
   text-align: center;
 }
