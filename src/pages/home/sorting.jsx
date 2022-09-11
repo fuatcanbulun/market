@@ -6,32 +6,14 @@ import Box from '../../components/box'
 import Title from '../../components/title'
 import RadioGroup from '../../components/radioGroup'
 
-function Sorting({title}) {
+function Sorting({title,data,value,onChange}) {
 
-    const sampleData = [
-        {
-            id:'lowToHigh',
-            label:'Price low to high'
-        },
-        {
-            id:'highToLow',
-            label:'Price high to low'
-        },
-        {
-            id:'newToOld',
-            label:'New to old'
-        },
-        {
-            id:'oldToNew',
-            label:'Old to new'
-        }
-    ] 
 
   return (
     <>
-    <Title title={title}/>      
+    <Title size="sm" title={title}/>      
     <Box>
-        <RadioGroup data={sampleData}/>  
+        <RadioGroup data={data} value={value} onChange={onChange} />  
     </Box>
     </>
   );

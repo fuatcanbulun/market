@@ -1,0 +1,24 @@
+.market-items-filter {
+    width: auto;
+    height: 30px;  
+    border-radius: 2px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 16px 0;
+}
+
+.market-items-filter-button {
+    width:60px;
+    height:30px;
+    line-height: 30px;  
+    font-size: 13px;
+    border-radius: 2px;
+    margin-right: 8px;
+    background-color: var(--tertiaryText);
+    color:var(--whiteText);
+    text-align: center;
+}
+
+.market-items-filter-button[status="active"] {
+    background-color: var(--themeColor);
+}

@@ -8,6 +8,7 @@
     height:22px;
     display: flex;
     margin-bottom: 16px;
+    cursor: pointer;
 }
 
 .market-radio-group-item:last-child {
@@ -19,6 +20,10 @@
     height:18px;
     border-radius: 18px;
     border: 2px solid #DFDEE2;
+}
+
+.market-radio-group-item[status="active"]>.market-radio-group-item-icon {
+    background-color: var(--themeColor);
 }
 
 .market-radio-group-item-label {

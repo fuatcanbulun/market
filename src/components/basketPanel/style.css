@@ -23,6 +23,10 @@
     top:16px;
     left:6px;   
     font-size: 14px;
+    width:150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .market-basket-panel-body-item-price {    
@@ -39,7 +43,10 @@
     top:20px;
     width:32px;
     height:32px;
-    background-color: var(--areaColor3);
+    background-image:url('../../assets/icons/icon-minus.png');
+    background-size: 11px 3px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .market-basket-panel-body-item-amount {    
     position: absolute;
@@ -47,7 +54,13 @@
     top:20px;
     width:32px;
     height:32px;
+    line-height: 32px;
     background-color: var(--themeColor);
+    color:var(--whiteText);
+    align-items: center;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
 }
 .market-basket-panel-body-item-plus {    
     position: absolute;
@@ -55,7 +68,10 @@
     top:20px;
     width:32px;
     height:32px;
-    background-color: var(--areaColor3);
+    background-image:url('../../assets/icons/icon-plus.png');
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .market-basket-panel-body-total { 
     width:100%;

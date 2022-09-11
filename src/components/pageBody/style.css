@@ -1,12 +1,14 @@
 .market-page-body {
-    height: calc(100vh - 76px);
+    padding-top: 76px;
+    height:auto;  
     width: 100%;
     display: flex;
     justify-content: center;   
-    background-color: var(--areaColor1);
+    background-color: var(--areaColor1);     
 }
 
 .market-page-body-grid {   
+    margin-top: 40px;
     width: 800px;
     display: flex;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 
-function Title({title}) {
+function Title({title,size}) {
   return (
-    <div className="market-title">{title}</div>     
+    <div className={"market-title " +size}>{title}</div>     
   );
 }
 

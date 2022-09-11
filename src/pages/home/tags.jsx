@@ -6,48 +6,20 @@ import Box from '../../components/box'
 import Title from '../../components/title'
 import CheckboxGroup from '../../components/checkboxGroup'
 
-function Tags({title}) {
+function Tags({title,data,value,onChange}) {
 
-    const sampleData = [
-        {
-            id:'lowToHigh',
-            label:'Price low to high'
-        },
-        {
-            id:'highToLow',
-            label:'Price high to low'
-        },
-        {
-            id:'newToOld',
-            label:'New to old'
-        },
-        {
-            id:'oldToNew',
-            label:'Old to new'
-        },
-        {
-            id:'lowToHigh',
-            label:'Price low to high'
-        },
-        {
-            id:'highToLow',
-            label:'Price high to low'
-        },
-        {
-            id:'newToOld',
-            label:'New to old'
-        },
-        {
-            id:'oldToNew',
-            label:'Old to new'
+    const mappedData = data.map(function(obj) {
+        return {
+            id:obj.toLowerCase(),
+            label:obj
         }
-    ] 
+    });
 
-  return (
+return (
     <>
-    <Title title={title}/>      
+    <Title size="sm" title={title}/>      
     <Box>
-        <CheckboxGroup data={sampleData} placeholder="Search tag"/>  
+        <CheckboxGroup data={mappedData} onChange={onChange} value={value} placeholder="Search tag"/>  
     </Box>
     </>
   );

@@ -42,6 +42,7 @@
     height:22px;
     display: flex;
     margin-bottom: 16px;
+    cursor: pointer;
 }
 
 .market-checkbox-group-item:last-child {
@@ -56,9 +57,18 @@
     box-shadow: 0px 1px 7px rgba(93, 56, 192, 0.4);
 }
 
+.market-checkbox-group-item[status='active']>.market-checkbox-group-item-icon {
+    background-color: var(--themeColor)
+}
+
 .market-checkbox-group-item-label {
     height:22px;
     line-height: 22px;
     font-size:14px;
     padding-left:12px;
+    width:200px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
 }

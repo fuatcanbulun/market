@@ -4,7 +4,11 @@
   --areaColor2: #ffffff;
   --areaColor3: #E0E0E0;
   --areaColor4: #F4F4F4;
-  --tertiaryText: #A8A8A8;
+  --areaColor5: #ccc;
+  --themeDarkColor: #147594;
+  --secondaryText:#697488;
+  --tertiaryText: #A8A8A8;  
+  --whiteText: #ffffff; 
 }
 
 .App {
