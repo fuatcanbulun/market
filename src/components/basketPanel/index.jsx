@@ -22,7 +22,8 @@ function BasketPanel() {
                     {item.label}
                   </div>
                   <div className="market-basket-panel-body-item-price">
-                    ₺ {item.price}
+                    <span>₺</span>
+                    {item.price}
                   </div>
                   <div
                     className="market-basket-panel-body-item-minus"
@@ -40,7 +41,7 @@ function BasketPanel() {
             ))}
             <div className="market-basket-panel-body-total">
               <div className="market-basket-panel-body-total-box">
-                ₺ {basket.total > 0 ? basket.total.toFixed(2) : 0}
+                <span>₺</span> {basket.total > 0 ? basket.total.toFixed(2) : 0}
               </div>
             </div>
           </>

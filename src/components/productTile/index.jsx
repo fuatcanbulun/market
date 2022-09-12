@@ -7,7 +7,9 @@ function ProductTile({ label, price, onClick }) {
       <div className="market-product-tile-image-box">
         <div className="market-product-tile-image"></div>
       </div>
-      <div className="market-product-tile-price">₺ {price}</div>
+      <div className="market-product-tile-price">
+        <span>₺</span> {price}
+      </div>
       <div className="market-product-tile-label">{label}</div>
       <div className="market-product-tile-button" onClick={() => onClick()}>
         Add

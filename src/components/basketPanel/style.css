@@ -27,6 +27,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-family: marketFont400;
 }
 
 .market-basket-panel-body-item-price {
@@ -34,7 +35,13 @@
   left: 6px;
   top: 38px;
   font-size: 14px;
+  font-family: marketFont600;
   color: var(--themeColor);
+}
+
+.market-basket-panel-body-item-price > span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
 .market-basket-panel-body-item-minus {
@@ -61,6 +68,7 @@
   align-items: center;
   font-weight: 700;
   font-size: 15px;
+  font-family: marketFont;
   text-align: center;
 }
 .market-basket-panel-body-item-plus {
@@ -88,8 +96,13 @@
   line-height: 48px;
   border: 2px solid var(--themeColor);
   font-size: 14px;
+  font-family: marketFont600;
   color: var(--themeColor);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.market-basket-panel-body-total-box > span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }

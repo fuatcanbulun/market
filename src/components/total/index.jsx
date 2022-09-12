@@ -8,7 +8,8 @@ function Total() {
     <div className="market-total">
       <div className="market-total-icon"></div>
       <div className="market-total-value">
-        ₺ {basket.total > 0 ? basket.total.toFixed(2) : 0}
+        <span>₺ </span>
+        {basket.total > 0 ? basket.total.toFixed(2) : 0}
       </div>
     </div>
   );

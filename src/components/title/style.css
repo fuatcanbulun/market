@@ -2,6 +2,7 @@
   height: 18px;
   line-height: 18px;
   font-size: 13px;
+  font-family: marketFont;
   text-align: left;
 }
 
@@ -9,14 +10,15 @@
   height: 18px;
   line-height: 18px;
   font-size: 13px;
+  font-family: marketFont600;
   text-align: left;
-  font-weight: 600;
   color: var(--secondaryText);
 }
 
 .market-title.md {
   height: 26px;
   font-size: 20px;
+  font-family: marketFont400;
   line-height: 20px;
   text-align: left;
   color: var(--secondaryText);

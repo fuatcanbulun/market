@@ -21,6 +21,12 @@
   width: auto;
   line-height: 24px;
   font-size: 14px;
+  font-family: marketFont600;
   white-space: nowrap;
   color: var(--whiteText);
+}
+
+.market-total-value > span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }

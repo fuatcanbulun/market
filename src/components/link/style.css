@@ -3,6 +3,7 @@
   height: 30px;
   line-height: 30px;
   font-size: 13px;
+  font-family: marketFont400;
   text-align: center;
   padding: 0 15px;
   color: var(--themeColor);
@@ -12,6 +13,7 @@
 .market-link::after {
   content: ".";
   font-size: 30px;
+  font-family: marketFont400;
   position: absolute;
   top: -10px;
   width: 30px;

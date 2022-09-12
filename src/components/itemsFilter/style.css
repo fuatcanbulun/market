@@ -12,6 +12,7 @@
   height: 30px;
   line-height: 30px;
   font-size: 13px;
+  font-family: marketFont400;
   border-radius: 2px;
   margin-right: 8px;
   background-color: var(--areaColor5);
