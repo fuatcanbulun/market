@@ -1,29 +1,50 @@
-import React from 'react';
-import './style.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { increaseAmount,decreaseAmount } from '../../store/actions/basket';
-
+import React from "react";
+import "./style.css";
+import { useSelector, useDispatch } from "react-redux";
+import { increaseAmount, decreaseAmount } from "../../store/actions/basket";
+import NoResultBanner from "../noResultBanner";
 
 function BasketPanel() {
   const dispatch = useDispatch();
-  const {basket} = useSelector((state)=>state);
-
+  const { basket } = useSelector((state) => state);
 
   return (
-    <div className="market-basket-panel">  
-      <div className="market-basket-panel-body">  
-        {basket.list.map(item=>(
-          <div className="market-basket-panel-body-item">
-            <div className="market-basket-panel-body-item-label">{item.label}</div>
-            <div className="market-basket-panel-body-item-price">₺ {item.price}</div>
-            <div className="market-basket-panel-body-item-minus" onClick={()=>dispatch(decreaseAmount(item.id))} ></div>
-            <div className="market-basket-panel-body-item-amount">{item.amount}</div>
-            <div className="market-basket-panel-body-item-plus" onClick={()=>dispatch(increaseAmount(item.id))}></div>
-          </div>
-        ))}    
-        <div className="market-basket-panel-body-total">
-          <div className="market-basket-panel-body-total-box">₺ {basket.total>0?basket.total.toFixed(2):0}</div>
-        </div>
+    <div className="market-basket-panel">
+      <div className="market-basket-panel-body">
+        {basket.list.length === 0 ? (
+          <NoResultBanner label="No items in basket" />
+        ) : (
+          <>
+            {basket.list.map((item, index) => (
+              <React.Fragment key={index}>
+                <div className="market-basket-panel-body-item">
+                  <div className="market-basket-panel-body-item-label">
+                    {item.label}
+                  </div>
+                  <div className="market-basket-panel-body-item-price">
+                    ₺ {item.price}
+                  </div>
+                  <div
+                    className="market-basket-panel-body-item-minus"
+                    onClick={() => dispatch(decreaseAmount(item.id))}
+                  ></div>
+                  <div className="market-basket-panel-body-item-amount">
+                    {item.amount}
+                  </div>
+                  <div
+                    className="market-basket-panel-body-item-plus"
+                    onClick={() => dispatch(increaseAmount(item.id))}
+                  ></div>
+                </div>
+              </React.Fragment>
+            ))}
+            <div className="market-basket-panel-body-total">
+              <div className="market-basket-panel-body-total-box">
+                ₺ {basket.total > 0 ? basket.total.toFixed(2) : 0}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

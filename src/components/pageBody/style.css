@@ -1,24 +1,24 @@
 .market-page-body {
-    padding-top: 76px;
-    height:auto;  
-    width: 100%;
-    display: flex;
-    justify-content: center;   
-    background-color: var(--areaColor1);     
+  padding-top: 76px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--areaColor1);
 }
 
-.market-page-body-grid {   
-    margin-top: 40px;
-    width: 800px;
-    display: flex;
+.market-page-body-grid {
+  margin-top: 40px;
+  width: 800px;
+  display: flex;
 }
 @media screen and (min-width: 960px) {
-    .market-page-body-grid {
-        width: 800px;
-    }
+  .market-page-body-grid {
+    width: 800px;
+  }
 }
 @media screen and (min-width: 1200px) {
-    .market-page-body-grid {
-        width: 1232px;   
-    }
+  .market-page-body-grid {
+    width: 1232px;
+  }
 }

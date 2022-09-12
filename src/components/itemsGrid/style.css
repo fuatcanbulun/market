@@ -1,7 +1,7 @@
-.market-items-grid {    
-    background-color: var(--areaColor2);
-    border-radius: 2px;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 8px;
+.market-items-grid {
+  background-color: var(--areaColor2);
+  border-radius: 2px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 8px;
 }

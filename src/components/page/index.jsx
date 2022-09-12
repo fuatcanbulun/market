@@ -1,12 +1,8 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
-function Page({children}) {
-  return (
-    <div className="market-page">
-      {children}
-    </div>
-  );
+function Page({ children }) {
+  return <div className="market-page">{children}</div>;
 }
 
 export default Page;

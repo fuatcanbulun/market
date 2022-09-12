@@ -1,6 +1,6 @@
 .market-logo {
-    height: 40px;
-    width: 141px; 
-    background-image: url('../../assets/icons/logo.png');
-    background-size: cover;
+  height: 40px;
+  width: 141px;
+  background-image: url("../../assets/icons/logo.png");
+  background-size: cover;
 }

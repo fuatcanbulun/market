@@ -1,11 +1,10 @@
+import React from "react";
 
-import React from 'react'
-
-// Components 
-import BasketPanel from '../../components/basketPanel'
+// Components
+import BasketPanel from "../../components/basketPanel";
 
 function Basket() {
-  return <BasketPanel/>;
+  return <BasketPanel />;
 }
 
 export default Basket;

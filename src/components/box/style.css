@@ -1,8 +1,8 @@
 .market-box {
-    height: auto;
-    margin-top: 12px;
-    margin-bottom: 24px;    
-    padding: 24px;   
-    background-color: var(--areaColor2);
-    border-radius: 2px;
+  height: auto;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  padding: 24px;
+  background-color: var(--areaColor2);
+  border-radius: 2px;
 }

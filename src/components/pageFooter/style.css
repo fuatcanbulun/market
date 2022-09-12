@@ -1,9 +1,7 @@
 .market-page-footer {
-    width:auto;
-    height:63px;
-    display: flex;
-    justify-content: center;
-    background-color: var(--areaColor1);   
+  width: auto;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--areaColor1);
 }
-
-

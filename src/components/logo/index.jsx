@@ -1,10 +1,8 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
 function Logo() {
-  return (
-    <div className="market-logo"></div>
-  );
+  return <div className="market-logo"></div>;
 }
 
 export default Logo;

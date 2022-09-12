@@ -1,0 +1,9 @@
+.market-no-result-banner {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--themeColor);
+  border: 2px solid var(--themeColor);
+}

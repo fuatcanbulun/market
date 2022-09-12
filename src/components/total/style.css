@@ -1,26 +1,26 @@
 .market-total {
-    height: 76px;
-    width: 123px;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--themeDarkColor);
+  height: 76px;
+  width: 123px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeColorDark);
 }
 
 .market-total-icon {
-    height: 24px;
-    width: 24px;    
-    display: inline-block;
-    background-image: url('../../assets/icons/icon-lock.png');
-    background-size: cover;
-    margin-right:8px;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  background-image: url("../../assets/icons/icon-lock.png");
+  background-size: cover;
+  margin-right: 8px;
 }
 
 .market-total-value {
-    height: 24px;
-    width: auto; 
-    line-height: 24px; 
-    font-size: 14px;
-    white-space: nowrap;
-    color:var(--whiteText)
+  height: 24px;
+  width: auto;
+  line-height: 24px;
+  font-size: 14px;
+  white-space: nowrap;
+  color: var(--whiteText);
 }
