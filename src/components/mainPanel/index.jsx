@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { MainContainer } from "./style";
 
 function MainPanel({ children }) {
-  return <div className="market-main-panel">{children}</div>;
+  return <MainContainer>{children}</MainContainer>;
 }
 
 export default MainPanel;

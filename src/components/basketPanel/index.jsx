@@ -1,53 +1,58 @@
 import React from "react";
-import "./style.css";
 import { useSelector, useDispatch } from "react-redux";
 import { increaseAmount, decreaseAmount } from "../../store/actions/basket";
 import NoResultBanner from "../noResultBanner";
+import {
+  BasketPanelContainer,
+  BasketPanelBodyItem,
+  BasketPanelBodyItemAmount,
+  BasketPanelBodyItemLabel,
+  BasketPanelBodyItemMinus,
+  BasketPanelBodyItemPlus,
+  BasketPanelBodyItemPrice,
+  BasketPanelBodyTotal,
+  BasketPanelBodyTotalBox,
+} from "./style";
 
 function BasketPanel() {
   const dispatch = useDispatch();
   const { basket } = useSelector((state) => state);
 
   return (
-    <div className="market-basket-panel">
-      <div className="market-basket-panel-body">
-        {basket.list.length === 0 ? (
-          <NoResultBanner label="No items in basket" />
-        ) : (
-          <>
-            {basket.list.map((item, index) => (
-              <React.Fragment key={index}>
-                <div className="market-basket-panel-body-item">
-                  <div className="market-basket-panel-body-item-label">
-                    {item.label}
-                  </div>
-                  <div className="market-basket-panel-body-item-price">
-                    <span>₺</span>
-                    {item.price}
-                  </div>
-                  <div
-                    className="market-basket-panel-body-item-minus"
-                    onClick={() => dispatch(decreaseAmount(item.id))}
-                  ></div>
-                  <div className="market-basket-panel-body-item-amount">
-                    {item.amount}
-                  </div>
-                  <div
-                    className="market-basket-panel-body-item-plus"
-                    onClick={() => dispatch(increaseAmount(item.id))}
-                  ></div>
-                </div>
-              </React.Fragment>
-            ))}
-            <div className="market-basket-panel-body-total">
-              <div className="market-basket-panel-body-total-box">
-                <span>₺</span> {basket.total > 0 ? basket.total.toFixed(2) : 0}
-              </div>
-            </div>
-          </>
-        )}
-      </div>
-    </div>
+    <BasketPanelContainer>
+      {basket.list.length === 0 ? (
+        <NoResultBanner label="No items in basket" />
+      ) : (
+        <>
+          {basket.list.map((item, index) => (
+            <React.Fragment key={index}>
+              <BasketPanelBodyItem>
+                <BasketPanelBodyItemLabel>
+                  {item.label}
+                </BasketPanelBodyItemLabel>
+                <BasketPanelBodyItemPrice>
+                  ${item.price}
+                </BasketPanelBodyItemPrice>
+                <BasketPanelBodyItemMinus
+                  onClick={() => dispatch(decreaseAmount(item.id))}
+                ></BasketPanelBodyItemMinus>
+                <BasketPanelBodyItemAmount>
+                  {item.amount}
+                </BasketPanelBodyItemAmount>
+                <BasketPanelBodyItemPlus
+                  onClick={() => dispatch(increaseAmount(item.id))}
+                ></BasketPanelBodyItemPlus>
+              </BasketPanelBodyItem>
+            </React.Fragment>
+          ))}
+          <BasketPanelBodyTotal>
+            <BasketPanelBodyTotalBox>
+              ${basket.total > 0 ? basket.total.toFixed(2) : 0}
+            </BasketPanelBodyTotalBox>
+          </BasketPanelBodyTotal>
+        </>
+      )}
+    </BasketPanelContainer>
   );
 }
 

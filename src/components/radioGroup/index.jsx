@@ -1,22 +1,26 @@
 import React from "react";
-import "./style.css";
+import {
+  RadioGroupContainer,
+  RadioGroupItem,
+  RadioGroupItemIcon,
+  RadioGroupItemLabel,
+} from "./style";
 
 function RadioGroup({ data, value, onChange }) {
   return (
-    <div className="market-radio-group">
+    <RadioGroupContainer>
       {data.map((item, index) => (
         <React.Fragment key={index}>
-          <div
-            className="market-radio-group-item"
-            status={value && value === item.id ? "active" : "passive"}
-            onClick={() => onChange(item.id)}
-          >
-            <div className="market-radio-group-item-icon" />
-            <div className="market-radio-group-item-label">{item.label}</div>
-          </div>
+          <RadioGroupItem>
+            <RadioGroupItemIcon
+              status={value && value === item.id ? "active" : "passive"}
+              onClick={() => onChange(item.id)}
+            />
+            <RadioGroupItemLabel>{item.label}</RadioGroupItemLabel>
+          </RadioGroupItem>
         </React.Fragment>
       ))}
-    </div>
+    </RadioGroupContainer>
   );
 }
 

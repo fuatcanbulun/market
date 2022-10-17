@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { TitleContainer } from "./style";
 
 function Title({ title, size }) {
-  return <div className={"market-title " + size}>{title}</div>;
+  return <TitleContainer size={size}>{title}</TitleContainer>;
 }
 
 export default Title;

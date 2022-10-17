@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { ItemsGridContainer } from "./style";
 
 function ItemsGrid({ children }) {
-  return <div className="market-items-grid">{children}</div>;
+  return <ItemsGridContainer>{children}</ItemsGridContainer>;
 }
 
 export default ItemsGrid;

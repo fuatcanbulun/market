@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import Page from "../../components/page";
 import PageHeader from "../../components/pageHeader";
 import PageBody from "../../components/pageBody";
-import PageFooter from "../../components/pageFooter";
 import SidePanel from "../../components/sidePanel";
 import MainPanel from "../../components/mainPanel";
 import Logo from "../../components/logo";
@@ -16,7 +15,6 @@ import Brands from "./brands";
 import Tags from "./tags";
 import Basket from "./basket";
 import Products from "./products";
-import Links from "./links";
 
 const sortingOptions = [
   {
@@ -111,7 +109,6 @@ function Home() {
     } else {
       typeFilterResult = tagFilterResult;
     }
-
     setFilteredData(typeFilterResult);
 
     //eslint-disable-next-line
@@ -129,8 +126,13 @@ function Home() {
     fetch(`../../mockData/items.json`)
       .then((response) => response.json())
       .then((data) => {
-        setItems(data);
-        getTags(data);
+        const mappedData = data.map((item, index) => {
+          item.iconId = index;
+          return item;
+        });
+
+        setItems(mappedData);
+        getTags(mappedData);
       });
   }
 
@@ -230,9 +232,6 @@ function Home() {
           <Basket />
         </SidePanel>
       </PageBody>
-      <PageFooter>
-        <Links />
-      </PageFooter>
     </Page>
   );
 }

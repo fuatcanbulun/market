@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { PageContainer } from "./style";
 
 function Page({ children }) {
-  return <div className="market-page">{children}</div>;
+  return <PageContainer>{children}</PageContainer>;
 }
 
 export default Page;

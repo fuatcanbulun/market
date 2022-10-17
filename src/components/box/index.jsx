@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { BoxContainer } from "./style";
 
 function Box({ children }) {
-  return <div className="market-box">{children}</div>;
+  return <BoxContainer>{children}</BoxContainer>;
 }
 
 export default Box;

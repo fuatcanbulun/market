@@ -5,7 +5,7 @@ import { addItem } from "../../store/actions/basket";
 // Components
 import Title from "../../components/title";
 import ItemsGrid from "../../components/itemsGrid";
-import ItemsFilter from "../../components/itemsFilter";
+import ItemsHeader from "../../components/itemsHeader";
 import ItemsPager from "../../components/itemsPager";
 import ProductTile from "../../components/productTile";
 import NoResultBanner from "../../components/noResultBanner";
@@ -23,16 +23,23 @@ function Products({
   const [activePage, setActivePage] = useState(1);
 
   useEffect(() => {
-    setRangeStart(activePage * itemCount - itemCount);
-    setRangeEnd(activePage * itemCount);
+    if (activePage && itemCount) {
+      setRangeStart(activePage * itemCount - itemCount);
+      setRangeEnd(activePage * itemCount);
+    }
   }, [activePage, itemCount]);
+
+  useEffect(() => {
+    setActivePage(1);
+  }, [data]);
 
   return (
     <>
       <Title size="md" title="Products" />
       {data.length > 0 ? (
         <>
-          <ItemsFilter
+          <ItemsHeader
+            result={data.length}
             relatedTypes={relatedTypes}
             selectedTypes={selectedTypes}
             selectType={selectType}
@@ -42,6 +49,7 @@ function Products({
               <React.Fragment key={index}>
                 {index >= rangeStart && index + 1 <= rangeEnd && (
                   <ProductTile
+                    icon={item.iconId}
                     label={item.name}
                     price={item.price}
                     onClick={() => dispatch(addItem(item))}

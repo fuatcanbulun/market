@@ -1,20 +1,23 @@
-import React from "react";
-import "./style.css";
+import React, { useEffect, useState } from "react";
+import {
+  ProductTileContainer,
+  ProductTileImageBox,
+  ProductTileImage,
+  ProductTilePrice,
+  ProductTileLabel,
+  ProductTileButton,
+} from "./style";
 
-function ProductTile({ label, price, onClick }) {
+function ProductTile({ label, price, icon, onClick }) {
   return (
-    <div className="market-product-tile">
-      <div className="market-product-tile-image-box">
-        <div className="market-product-tile-image"></div>
-      </div>
-      <div className="market-product-tile-price">
-        <span>₺</span> {price}
-      </div>
-      <div className="market-product-tile-label">{label}</div>
-      <div className="market-product-tile-button" onClick={() => onClick()}>
-        Add
-      </div>
-    </div>
+    <ProductTileContainer>
+      <ProductTileImageBox>
+        <ProductTileImage src={`http://picsum.photos/id/${icon}/500/500`} />
+      </ProductTileImageBox>
+      <ProductTilePrice>${price}</ProductTilePrice>
+      <ProductTileLabel>{label}</ProductTileLabel>
+      <ProductTileButton onClick={() => onClick()}>Add</ProductTileButton>
+    </ProductTileContainer>
   );
 }
 

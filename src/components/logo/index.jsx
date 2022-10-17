@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { LogoContainer } from "./style";
 
 function Logo() {
-  return <div className="market-logo"></div>;
+  return <LogoContainer />;
 }
 
 export default Logo;

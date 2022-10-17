@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { NoResultBannerContainer } from "./style";
 
 function NoResultBanner({ label }) {
-  return <div className="market-no-result-banner">{label}</div>;
+  return <NoResultBannerContainer>{label}</NoResultBannerContainer>;
 }
 
 export default NoResultBanner;

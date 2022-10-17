@@ -1,11 +1,11 @@
 import React from "react";
-import "./style.css";
+import { PageBodyContainer, PageBodyGrid } from "./style";
 
 function PageBody({ children }) {
   return (
-    <div className="market-page-body">
-      <div className="market-page-body-grid">{children}</div>
-    </div>
+    <PageBodyContainer>
+      <PageBodyGrid>{children}</PageBodyGrid>
+    </PageBodyContainer>
   );
 }
 

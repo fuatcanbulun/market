@@ -1,5 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./style.css";
+import {
+  CheckboxGroupContainer,
+  CheckboxGroupBody,
+  CheckboxGroupItem,
+  CheckboxGroupItemIcon,
+  CheckboxGroupItemLabel,
+  CheckboxGroupSearch,
+} from "./style";
 
 function CheckboxGroup({ data, value, onChange, placeholder }) {
   const [searchParameter, setSearchParameter] = useState(null);
@@ -42,30 +49,25 @@ function CheckboxGroup({ data, value, onChange, placeholder }) {
   }
 
   return (
-    <div className="market-checkbox-group">
-      <input
+    <CheckboxGroupContainer>
+      <CheckboxGroupSearch
         ref={searchInput}
-        className="market-checkbox-group-search"
         placeholder={placeholder}
         onChange={() => onSearch()}
       />
-      <div className="market-checkbox-group-body">
+      <CheckboxGroupBody>
         {filteredData.map((item, index) => (
           <React.Fragment key={index}>
-            <div
-              className="market-checkbox-group-item"
-              status={value?.includes(item.id) ? "active" : "passive"}
-              onClick={() => onChange(item.id)}
-            >
-              <div className="market-checkbox-group-item-icon" />
-              <div className="market-checkbox-group-item-label">
-                {item.label}
-              </div>
-            </div>
+            <CheckboxGroupItem onClick={() => onChange(item.id)}>
+              <CheckboxGroupItemIcon
+                status={value?.includes(item.id) ? "active" : "passive"}
+              />
+              <CheckboxGroupItemLabel>{item.label}</CheckboxGroupItemLabel>
+            </CheckboxGroupItem>
           </React.Fragment>
         ))}
-      </div>
-    </div>
+      </CheckboxGroupBody>
+    </CheckboxGroupContainer>
   );
 }
 

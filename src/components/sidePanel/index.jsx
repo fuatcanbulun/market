@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import { SidePanelContainer } from "./style";
 
 function SidePanel({ children }) {
-  return <div className="market-side-panel">{children}</div>;
+  return <SidePanelContainer>{children}</SidePanelContainer>;
 }
 
 export default SidePanel;
