@@ -1,6 +1,5 @@
 # Demo
-
-https://fuatcanbulun-market.herokuapp.com/
+https://fuatcanbulun-market.onrender.com/
 
 # Getting started with Market App
 
