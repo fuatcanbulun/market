@@ -44,7 +44,7 @@ function Home() {
   const [selectedSorting, setSelectedSorting] = useState(null);
   const [filteredData, setFilteredData] = useState([]);
   const [relatedTypes, setRelatedTypes] = useState([]);
-  const [selectedTypes, setSelectedTypes] = useState([]);
+  const [selectedTypes, setSelectedTypes] = useState(["personal", "home"]);
 
   useEffect(() => {
     getCompanies();
