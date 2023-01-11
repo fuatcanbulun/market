@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   ProductTileContainer,
   ProductTileImageBox,
-  ProductTileImage,
+  ProductTileBrand,
   ProductTilePrice,
   ProductTileLabel,
   ProductTileButton,
 } from "./style";
 
-function ProductTile({ label, price, icon, onClick }) {
+function ProductTile({ label, price, image, manufacturer, onClick }) {
   return (
     <ProductTileContainer>
-      <ProductTileImageBox>
-        <ProductTileImage src={`http://picsum.photos/id/${icon}/500/500`} />
-      </ProductTileImageBox>
+      <ProductTileImageBox image={image} />
+      <ProductTileBrand>{manufacturer}</ProductTileBrand>
       <ProductTilePrice>${price}</ProductTilePrice>
       <ProductTileLabel>{label}</ProductTileLabel>
       <ProductTileButton onClick={() => onClick()}>Add</ProductTileButton>

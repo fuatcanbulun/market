@@ -1,31 +1,47 @@
 import styled from "styled-components";
 
 const ProductTileContainer = styled.div`
-  width: 124px;
-  height: 225px;
-  margin: 12px;
+  width: 180px;
+  height: 300px;
+  margin: 10px;
   position: relative;
+  border: 1px solid var(--areaColor5);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
 `;
 
 const ProductTileImageBox = styled.div`
-  width: 124px;
-  height: 124px;
+  width: 160px;
+  height: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--areaColor5);
+  background-color: var(--areaColor2);
+  overflow: hidden;
   border-radius: 12px;
+  background-image: url(${(props) => props.image});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
-const ProductTileImage = styled.img`
-  width: 92px;
-  height: 92px;
-  background-color: var(--areaColor5);
+const ProductTileBrand = styled.div`
+  margin-top: 8px;
+  width: calc(100% - 20px);
+  height: 23px;
+  font-style: normal;
+  font-size: 16px;
+  font-family: marketFont700;
+  line-height: 20px;
+  text-align: left;
 `;
 
 const ProductTilePrice = styled.div`
-  margin-top: 8px;
-  width: 100%;
+  margin-top: 4px;
+  width: calc(100% - 20px);
   height: 23px;
   font-style: normal;
   font-size: 14px;
@@ -36,7 +52,7 @@ const ProductTilePrice = styled.div`
 `;
 
 const ProductTileLabel = styled.div`
-  width: 100%;
+  width: calc(100% - 20px);
   height: 40px;
   font-weight: 600;
   font-size: 14px;
@@ -47,9 +63,9 @@ const ProductTileLabel = styled.div`
 
 const ProductTileButton = styled.div`
   position: absolute;
-  width: 100%;
+  width: calc(100% - 20px);
   height: 22px;
-  bottom: 0;
+  bottom: 10px;
   background-color: var(--areaColor5);
   color: var(--whiteText);
   font-style: normal;
@@ -67,7 +83,7 @@ const ProductTileButton = styled.div`
 export {
   ProductTileContainer,
   ProductTileImageBox,
-  ProductTileImage,
+  ProductTileBrand,
   ProductTilePrice,
   ProductTileLabel,
   ProductTileButton,

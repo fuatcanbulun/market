@@ -9,6 +9,7 @@ const NoResultBannerContainer = styled.div`
   font-family: marketFont400;
   color: var(--themeColor);
   border: 2px solid var(--themeColor);
+  border-radius: 25px;
 `;
 
 export { NoResultBannerContainer };

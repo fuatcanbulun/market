@@ -5,10 +5,8 @@ import iconPlus from "../../assets/icons/icon-plus.svg";
 const BasketPanelContainer = styled.div`
   height: auto;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(5px);
   border-radius: 15px;
-  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--areaColor5);
 `;
 
 const BasketPanelBodyItem = styled.div`
@@ -100,6 +98,7 @@ const BasketPanelBodyTotalBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 25px;
 `;
 
 export {

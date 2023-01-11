@@ -35,24 +35,26 @@ function Products({
 
   return (
     <>
-      <Title size="md" title="Products" />
+      <Title size="md" title="Products" margin="0 10px" />
+      <ItemsHeader
+        result={data.length}
+        relatedTypes={relatedTypes}
+        selectedTypes={selectedTypes}
+        selectType={selectType}
+      />
       {data.length > 0 ? (
         <>
-          <ItemsHeader
-            result={data.length}
-            relatedTypes={relatedTypes}
-            selectedTypes={selectedTypes}
-            selectType={selectType}
-          />
           <ItemsGrid>
             {data.map((item, index) => (
               <React.Fragment key={index}>
                 {index >= rangeStart && index + 1 <= rangeEnd && (
                   <ProductTile
                     icon={item.iconId}
+                    manufacturer={item.manufacturer}
                     label={item.name}
                     price={item.price}
                     onClick={() => dispatch(addItem(item))}
+                    image={item.image}
                   />
                 )}
               </React.Fragment>
@@ -60,7 +62,7 @@ function Products({
           </ItemsGrid>
           <ItemsPager
             dataCount={data.length}
-            itemCount={16}
+            itemCount={15}
             activePage={activePage}
             onChange={(val) => setActivePage(val)}
           />

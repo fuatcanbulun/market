@@ -96,9 +96,6 @@ function Home() {
       }
     });
     setRelatedTypes(types);
-    if (selectedTypes.length === 0) {
-      setSelectedTypes(types);
-    }
 
     if (selectedTypes.length > 0) {
       tagFilterResult.forEach((item) => {
@@ -106,8 +103,6 @@ function Home() {
           typeFilterResult.push(item);
         }
       });
-    } else {
-      typeFilterResult = tagFilterResult;
     }
     setFilteredData(typeFilterResult);
 
@@ -222,7 +217,7 @@ function Home() {
         <MainPanel>
           <Products
             data={filteredData}
-            itemCount={16}
+            itemCount={15}
             relatedTypes={relatedTypes}
             selectedTypes={selectedTypes}
             selectType={(val) => onSelectType(val)}

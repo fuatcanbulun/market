@@ -3,6 +3,7 @@ import styled from "styled-components";
 const TitleContainer = styled.div`
   height: ${(props) =>
     props.size === "sm" ? "18px" : props.size === "md" ? "26px" : "0px"};
+  margin: ${(props) => props.margin};
   line-height: ${(props) =>
     props.size === "sm" ? "18px" : props.size === "md" ? "26px" : "0px"};
   font-size: ${(props) =>
@@ -13,7 +14,7 @@ const TitleContainer = styled.div`
       : props.size === "md"
       ? "marketFont400"
       : "marketFont"};
-  text-align: left;
+  text-align: ${(props) => (props.centered ? "center" : "left")};
 `;
 
 export { TitleContainer };

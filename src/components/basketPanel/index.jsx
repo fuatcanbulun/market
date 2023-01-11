@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { increaseAmount, decreaseAmount } from "../../store/actions/basket";
-import NoResultBanner from "../noResultBanner";
+import Title from "../title";
 import {
   BasketPanelContainer,
   BasketPanelBodyItem,
@@ -21,7 +21,7 @@ function BasketPanel() {
   return (
     <BasketPanelContainer>
       {basket.list.length === 0 ? (
-        <NoResultBanner label="No items in basket" />
+        <Title size="sm" title="Empty Basket" centered />
       ) : (
         <>
           {basket.list.map((item, index) => (

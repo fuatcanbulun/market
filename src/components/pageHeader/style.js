@@ -6,7 +6,7 @@ const PageHeaderContainer = styled.div`
   z-index: 1;
   width: 100%;
   height: 76px;
-  background-color: var(--areaColor2);
+  background-color: var(--areaColor4);
   display: flex;
   justify-content: center;
 `;

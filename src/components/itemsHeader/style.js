@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ItemsHeaderContainer = styled.div`
   position: relative;
-  width: auto;
+  width: 100%;
   height: 30px;
   border-radius: 2px;
   display: flex;
@@ -11,13 +11,13 @@ const ItemsHeaderContainer = styled.div`
 `;
 
 const ItemsFilterButton = styled.div`
-  width: 60px;
+  width: 100px;
   height: 30px;
   line-height: 30px;
   font-size: 13px;
   font-family: marketFont400;
   border-radius: 15px;
-  margin-right: 8px;
+  margin-left: 10px;
   background: ${(props) =>
     props.status === "active" ? "var(--themeColor)" : "var(--areaColor5)"};
   color: var(--whiteText);
@@ -27,7 +27,7 @@ const ItemsFilterButton = styled.div`
 
 const ItemsResult = styled.div`
   position: absolute;
-  right: 0px;
+  right: 10px;
   top: 0px;
   width: 200px;
   height: 30px;
